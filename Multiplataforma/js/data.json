@@ -1,0 +1,43 @@
+{
+    "usuarios" : [
+        {
+            "nombre" : "Nicolas", 
+            "apellido" : "Bermudes",
+            "telefono" : "777-3322",
+            "edad" : 40,
+            "email" : "nico@gmail.com",
+            "direccion" : "adress1",
+            "foto" : "foto1.jpg",
+            "id" : 1,
+            "activo" : true
+        },
+
+        {
+            "nombre" : "Karla", 
+            "apellido" : "Herrera",
+            "telefono" : "877-3322",
+            "edad" : 41,
+            "email" : "karla@gmail.com",
+            "direccion" : "adress2",
+            "foto" : "foto2.jpg",
+            "id" : 2,
+            "activo" : false
+
+
+        },
+        {
+            "nombre" : "Maria", 
+            "apellido" : "Alfaro",
+            "telefono" : "977-3322",
+            "edad" : 42,
+            "email" : "Maria@gmail.com",
+            "direccion" : "adress2",
+            "foto" : "foto2.jpg",
+            "id" : 3,
+            "activo" : true
+
+        }
+      
+
+    ]
+}
