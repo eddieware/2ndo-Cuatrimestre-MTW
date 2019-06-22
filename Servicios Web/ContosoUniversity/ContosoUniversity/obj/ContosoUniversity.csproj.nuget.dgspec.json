@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\source\\repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {}
+    "C:\\Users\\Eduardo\\source\\repos\\eddieware\\Servicios Web\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\source\\repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {
+    "C:\\Users\\Eduardo\\source\\repos\\eddieware\\Servicios Web\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\eddieware\\Servicios Web\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\eddieware\\Servicios Web\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\ContosoUniversity\\ContosoUniversity\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\eddieware\\Servicios Web\\ContosoUniversity\\ContosoUniversity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
