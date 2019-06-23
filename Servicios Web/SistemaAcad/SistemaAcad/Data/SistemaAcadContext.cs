@@ -14,5 +14,7 @@ namespace SistemaAcad.Models
         }
 
         public DbSet<SistemaAcad.Models.Categoria> Categoria { get; set; }
+
+        //Aqui se iran agregando las entidades del modelo
     }
 }

@@ -9,14 +9,13 @@ namespace SistemaAcad.Models
     public class Categoria
     {
         public int CategoriaID { get; set; }
-        [Required(ErrorMessage = "El nombre debe tener de 3 a 50 letras")]
-        [StringLength(50,MinimumLength=3,ErrorMessage = "eL NOMBRE DEBE TENER DE 3 A 50 LETRAS")]
-
+        [Required(ErrorMessage = "Obligatorio")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "El nombre debe tener de 3 a 50 letras")]
         public string Nombre { get; set; }
-        [StringLength(256, MinimumLength = 3, ErrorMessage = "eL NOMBRE DEBE TENER DE 256 LETRAS MAXIMO")]
-        [Display(Name ="descripcion")]
+        [StringLength(256, ErrorMessage = "Máximo 256 letras")]
+        [Display(Name = "Descripción)")]
         public string Descripcion { get; set; }
-
         public Boolean Estado { get; set; }
     }
+
 }
