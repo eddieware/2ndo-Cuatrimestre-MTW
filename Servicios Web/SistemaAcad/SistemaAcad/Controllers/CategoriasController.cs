@@ -19,10 +19,41 @@ namespace SistemaAcad.Controllers
         }
 
         // GET: Categorias
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            return View(await _context.Categoria.ToListAsync());
+            ViewData["NombreSortParm"] = String.IsNullOrEmpty(sortOrder) ? "nombre_desc" : "";
+
+
+            ViewData["DescripcionSortParm"] = sortOrder == "descripcion_asc" ? "descripcion_desc" : "descripcion_asc";
+
+            ViewData["NombreSortParm"] = String.IsNullOrEmpty(sortOrder) ? "nombre_desc" : ""; ViewData["DescripcionSortParm"] = sortOrder == "descripcion_asc" ? "descripcion_desc" : "descripcion_asc";
+
+            //PARTE DEL SORT
+
+            var categorias = from s in _context.Categoria select s;
+            switch (sortOrder)
+            {
+                case "nombre_desc":
+                    categorias = categorias.OrderByDescending(s => s.Nombre);
+                    break;
+                case "descripcion_desc":
+                    categorias = categorias.OrderByDescending(s => s.Descripcion);
+                    break;
+                case "descripcion_asc":
+                    categorias = categorias.OrderBy(s => s.Descripcion);
+                    break;
+                default:
+                    categorias = categorias.OrderBy(s => s.Nombre);
+                    break;
+            }
+
+
+
+
+            return View(await categorias.AsNoTracking().ToListAsync());
+
         }
+
 
         // GET: Categorias/Details/5
         public async Task<IActionResult> Details(int? id)
