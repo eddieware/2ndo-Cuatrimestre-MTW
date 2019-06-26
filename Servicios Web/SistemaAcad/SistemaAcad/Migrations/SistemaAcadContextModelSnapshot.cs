@@ -24,6 +24,9 @@ namespace SistemaAcad.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Carrera")
+                        .HasMaxLength(30);
+
                     b.Property<string>("Descripcion")
                         .HasMaxLength(256);
 

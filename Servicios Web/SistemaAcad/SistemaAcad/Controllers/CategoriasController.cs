@@ -23,28 +23,58 @@ namespace SistemaAcad.Controllers
         {
             ViewData["NombreSortParm"] = String.IsNullOrEmpty(sortOrder) ? "nombre_desc" : "";
 
+           
+
 
             ViewData["DescripcionSortParm"] = sortOrder == "descripcion_asc" ? "descripcion_desc" : "descripcion_asc";
 
             ViewData["NombreSortParm"] = String.IsNullOrEmpty(sortOrder) ? "nombre_desc" : ""; ViewData["DescripcionSortParm"] = sortOrder == "descripcion_asc" ? "descripcion_desc" : "descripcion_asc";
 
-            //PARTE DEL SORT
+
+            ViewData["CarreraSortParm"] = sortOrder == "carrera_asc" ? "carrera_desc" : "carrera_asc";
+
+
+            //PARTE DEL SORT CON EL switch
 
             var categorias = from s in _context.Categoria select s;
             switch (sortOrder)
             {
-                case "nombre_desc":
-                    categorias = categorias.OrderByDescending(s => s.Nombre);
-                    break;
-                case "descripcion_desc":
-                    categorias = categorias.OrderByDescending(s => s.Descripcion);
-                    break;
-                case "descripcion_asc":
-                    categorias = categorias.OrderBy(s => s.Descripcion);
-                    break;
                 default:
                     categorias = categorias.OrderBy(s => s.Nombre);
                     break;
+
+                case "nombre_desc":
+                    categorias = categorias.OrderByDescending(s => s.Nombre);
+                    break;
+
+
+
+                case "carrera_desc":
+                    categorias = categorias.OrderByDescending(s => s.Carrera);
+                    break;
+
+                case "carrera_asc":
+                    categorias = categorias.OrderBy(s => s.Carrera);
+                    break;
+
+
+
+                case "descripcion_desc":
+                    categorias = categorias.OrderByDescending(s => s.Descripcion);
+                    break;
+                
+
+
+
+                case "descripcion_asc":
+                    categorias = categorias.OrderBy(s => s.Descripcion);
+                    break;
+
+                
+               
+
+
+
             }
 
 
@@ -84,7 +114,7 @@ namespace SistemaAcad.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoriaID,Nombre,Descripcion,Estado")] Categoria categoria)
+        public async Task<IActionResult> Create([Bind("CategoriaID,Nombre,Descripcion,Estado,Carrera")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +146,7 @@ namespace SistemaAcad.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoriaID,Nombre,Descripcion,Estado")] Categoria categoria)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoriaID,Nombre,Descripcion,Estado,Carrera")] Categoria categoria)
         {
             if (id != categoria.CategoriaID)
             {

@@ -9,7 +9,7 @@ using SistemaAcad.Models;
 namespace SistemaAcad.Migrations
 {
     [DbContext(typeof(SistemaAcadContext))]
-    [Migration("20190608191431_InitialCreate")]
+    [Migration("20190626144726_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,9 @@ namespace SistemaAcad.Migrations
                     b.Property<int>("CategoriaID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Carrera")
+                        .HasMaxLength(30);
 
                     b.Property<string>("Descripcion")
                         .HasMaxLength(256);

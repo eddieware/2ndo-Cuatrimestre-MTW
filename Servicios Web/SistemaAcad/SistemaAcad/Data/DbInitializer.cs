@@ -19,9 +19,12 @@ namespace SistemaAcad.Data
             }
             var categorias = new Categoria[]
             {
-                new Categoria{Nombre="Programacion",Descripcion="Curso de programacion ASP", Estado=true},
-                new Categoria{Nombre="Diseño Grafico",Descripcion="Curso de diseño gráfico", Estado=true},
-                new Categoria{Nombre="Matematicas",Descripcion="Algebra Lineal", Estado=true}
+                new Categoria{Nombre="Programacion",Carrera="Informática",Descripcion="Curso de programacion ASP", Estado=true},
+                new Categoria{Nombre="Diseño Grafico",Carrera="Informática",Descripcion="Curso de diseño gráfico", Estado=true},
+                new Categoria{Nombre="Matematicas",Carrera="Informática",Descripcion="Algebra Lineal", Estado=true},
+                new Categoria{Nombre="Programación",Carrera="Informática",Descripcion="Curso de Programación ASP", Estado=true}
+
+                //Carrera Informatica
 
             };
             foreach (Categoria c in categorias)

@@ -15,7 +15,8 @@ namespace SistemaAcad.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Nombre = table.Column<string>(maxLength: 50, nullable: false),
                     Descripcion = table.Column<string>(maxLength: 256, nullable: true),
-                    Estado = table.Column<bool>(nullable: false)
+                    Estado = table.Column<bool>(nullable: false),
+                    Carrera = table.Column<string>(maxLength: 30, nullable: true)
                 },
                 constraints: table =>
                 {
