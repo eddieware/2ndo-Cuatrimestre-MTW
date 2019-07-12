@@ -18,7 +18,7 @@ namespace PropertyAnimations1
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             Button botonAnimado = FindViewById<Button>(Resource.Id.botonAnimado);
-            botonAnimado.SetWidth(300);
+            botonAnimado.SetWidth(300);/*
             ObjectAnimator objectAnimator = ObjectAnimator.OfInt(botonAnimado, "width", 300, 250, 300);
             objectAnimator.SetDuration(3000);
             objectAnimator.SetInterpolator(new LinearInterpolator());
@@ -35,6 +35,15 @@ namespace PropertyAnimations1
             AnimatorSet ans = new Android.Animation.AnimatorSet();
             ans.PlayTogether(objectAnimator, objectAnimator1);
             ans.PlayTogether(objectAnimator1);
+            ans.Start();*/
+
+            ObjectAnimator objectAnimator2 = ObjectAnimator.OfFloat(botonAnimado, "rotationY", 0, 360);
+            objectAnimator2.SetDuration(10000);
+            objectAnimator2.SetInterpolator(new LinearInterpolator());
+            objectAnimator2.RepeatCount = 100;
+            AnimatorSet ans = new Android.Animation.AnimatorSet();
+            ans.PlayTogether(objectAnimator2);
+
             ans.Start();
 
 
