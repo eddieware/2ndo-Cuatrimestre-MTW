@@ -41,6 +41,14 @@ namespace PropertyAnimations1
             objectAnimator2.SetDuration(10000);
             objectAnimator2.SetInterpolator(new LinearInterpolator());
             objectAnimator2.RepeatCount = 100;
+            //ins 1
+            objectAnimator2.Update += (sender, e) => {
+                if ((float)e.Animation.AnimatedValue >= 90 && (float)e.Animation.AnimatedValue <= 270)
+                    botonAnimado.Text = "";
+                else
+                    botonAnimado.Text = "Boton animado";
+            };
+
             AnimatorSet ans = new Android.Animation.AnimatorSet();
             ans.PlayTogether(objectAnimator2);
 
