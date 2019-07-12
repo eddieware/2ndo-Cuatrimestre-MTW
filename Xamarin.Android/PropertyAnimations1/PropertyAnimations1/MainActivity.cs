@@ -27,7 +27,16 @@ namespace PropertyAnimations1
 
             //1 new
 
-            
+            ObjectAnimator objectAnimator1 = ObjectAnimator.OfInt(botonAnimado, "height", 120, 70, 120);
+            objectAnimator1.SetDuration(3000);
+            objectAnimator1.SetInterpolator(new LinearInterpolator());
+            objectAnimator1.RepeatCount = 100;
+
+            AnimatorSet ans = new Android.Animation.AnimatorSet();
+            ans.PlayTogether(objectAnimator, objectAnimator1);
+            ans.PlayTogether(objectAnimator1);
+            ans.Start();
+
 
 
 
