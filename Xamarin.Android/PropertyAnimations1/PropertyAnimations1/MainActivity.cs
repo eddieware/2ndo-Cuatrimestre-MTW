@@ -48,11 +48,17 @@ namespace PropertyAnimations1
                 else
                     botonAnimado.Text = "Boton animado";
             };
-
+            /*
             AnimatorSet ans = new Android.Animation.AnimatorSet();
             ans.PlayTogether(objectAnimator2);
 
-            ans.Start();
+            ans.Start();*/
+
+            Animator animator = AnimatorInflater.LoadAnimator(this, Resource.Animator.property);
+            animator.SetTarget(botonAnimado);
+
+            animator.Start();
+
 
 
 

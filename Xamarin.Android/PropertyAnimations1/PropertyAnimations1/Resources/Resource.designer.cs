@@ -304,6 +304,9 @@ namespace PropertyAnimations1
 			// aapt resource value: 0x7f060009
 			public const int mtrl_fab_transformation_sheet_expand_spec = 2131099657;
 			
+			// aapt resource value: 0x7f06000a
+			public const int property = 2131099658;
+			
 			static Animator()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
