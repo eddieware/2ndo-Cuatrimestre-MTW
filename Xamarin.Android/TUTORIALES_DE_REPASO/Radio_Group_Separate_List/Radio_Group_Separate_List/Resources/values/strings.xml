@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Radio_Group_Separate_List</string>
+    <string name="action_settings">Settings</string>
+  <string-array name="italian">
+    <item>pizza</item>
+    <item>pasta</item>
+    <item>salami</item>
+  </string-array>
+  
+  <string-array name="french">
+    <item>Wine</item>
+    <item>frogs_legs</item>
+    <item>cheese</item>
+  </string-array>
+</resources>
