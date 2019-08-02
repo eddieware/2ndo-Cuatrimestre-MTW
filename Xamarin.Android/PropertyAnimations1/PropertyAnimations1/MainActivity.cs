@@ -17,6 +17,7 @@ namespace PropertyAnimations1
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
             Button botonAnimado = FindViewById<Button>(Resource.Id.botonAnimado);
             botonAnimado.SetWidth(300);/*
             ObjectAnimator objectAnimator = ObjectAnimator.OfInt(botonAnimado, "width", 300, 250, 300);
@@ -54,10 +55,12 @@ namespace PropertyAnimations1
 
             ans.Start();*/
 
+            //Comentado para complementaria
+            /* 
             Animator animator = AnimatorInflater.LoadAnimator(this, Resource.Animator.property);
             animator.SetTarget(botonAnimado);
 
-            animator.Start();
+            animator.Start();*/
 
 
 
