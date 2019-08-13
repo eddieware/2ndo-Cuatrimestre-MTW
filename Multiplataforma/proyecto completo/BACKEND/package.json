@@ -1,0 +1,23 @@
+{
+  "name": "api-rest-mongodb",
+  "version": "1.0.0",
+  "description": "practica de maestria",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compat": "^1.0.4",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.2",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Rubensin",
+  "license": "MIT"
+}
