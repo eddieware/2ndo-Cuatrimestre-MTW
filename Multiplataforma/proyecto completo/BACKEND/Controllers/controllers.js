@@ -2,6 +2,8 @@
 // libreria para acceder al file system
 var fs = require('fs');
 
+var path = require('path');
+
 var Project = require('../Models/models');
 
 var controller={
@@ -103,7 +105,23 @@ var controller={
         else{
             return res.status(200).send({message: fileName});
         }
+    },
+
+    getImageFromFile: function(res, req){
+        var file = req.params.image;
+        var pathFile = './upload'+file;
+        fs.exists(pathFile, (exist)=>
+        {
+            if (exist){
+                return res.sendFile(path.resolve(pathFile));
+            }else{
+                return res.status(200).send({
+                    message:"no esiste ninguna imagen"
+                });
+            }
+        });
     }
+
 }
 
 module.exports = controller;
